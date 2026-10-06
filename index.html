@@ -1,0 +1,477 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Aayushman Baruah — AI/ML Engineer. Explore systems, experiments, and engineering projects through an interactive command interface."
+    />
+    <meta name="theme-color" content="#03070b" />
+    <meta name="color-scheme" content="dark" />
+    <title>Aayushman Baruah — AI/ML Engineering System</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=Space+Grotesk:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="icon" href="assets/icons/ab-core.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body class="booting">
+    <a class="skip-link" href="#main-content">Skip to content</a>
+
+    <div class="ambient-grid" aria-hidden="true"></div>
+    <div class="ambient-scan" aria-hidden="true"></div>
+    <div class="ambient-noise" aria-hidden="true"></div>
+
+    <section
+      class="boot-screen"
+      id="bootScreen"
+      role="dialog"
+      aria-modal="true"
+      aria-labelledby="bootTitle"
+    >
+      <div class="boot-screen__frame">
+        <div class="boot-screen__topline">
+          <span class="system-mark" aria-hidden="true"><i></i><i></i><i></i></span>
+          <span>AB / ENGINEERING INTERFACE</span>
+          <span id="bootClock">00:00:00</span>
+        </div>
+        <div class="boot-screen__content">
+          <p class="eyebrow">Secure interface handoff</p>
+          <h1 id="bootTitle">System initialization</h1>
+          <p class="boot-screen__copy">
+            Preparing an interactive engineering profile.
+          </p>
+          <ol class="boot-lines" id="bootLines" aria-live="polite"></ol>
+          <div class="boot-progress" aria-hidden="true">
+            <span id="bootProgressBar"></span>
+          </div>
+          <div class="boot-screen__footer">
+            <span id="bootStatusText">AWAITING CORE RESPONSE</span>
+            <button class="text-button" id="skipBoot" type="button">
+              Skip sequence <span aria-hidden="true">↗</span>
+            </button>
+          </div>
+        </div>
+        <div class="boot-corner boot-corner--tl" aria-hidden="true"></div>
+        <div class="boot-corner boot-corner--tr" aria-hidden="true"></div>
+        <div class="boot-corner boot-corner--bl" aria-hidden="true"></div>
+        <div class="boot-corner boot-corner--br" aria-hidden="true"></div>
+      </div>
+    </section>
+
+    <header class="site-header" id="siteHeader">
+      <a class="brand-mark" href="#home" aria-label="Aayushman Baruah home">
+        <span class="brand-mark__core" aria-hidden="true"><i></i><i></i></span>
+        <span class="brand-mark__label">AB<span>/</span>SYS</span>
+      </a>
+
+      <button
+        class="nav-toggle"
+        id="navToggle"
+        type="button"
+        aria-label="Open system navigation"
+        aria-expanded="false"
+        aria-controls="primaryNavigation"
+      >
+        <span></span><span></span>
+      </button>
+
+      <nav class="hud-nav" id="primaryNavigation" aria-label="System modules">
+        <a href="#systems" data-nav="systems"><span>01</span>Systems</a>
+        <a href="#projects" data-nav="projects"><span>02</span>Projects</a>
+        <a href="#stack" data-nav="stack"><span>03</span>Stack</a>
+        <a href="#lab" data-nav="lab"><span>04</span>Lab</a>
+        <a href="#contact" data-nav="contact"><span>05</span>Contact</a>
+      </nav>
+
+      <button class="header-voice" id="headerVoiceButton" type="button">
+        <span class="header-voice__dot" aria-hidden="true"></span>
+        <span>Voice</span>
+      </button>
+    </header>
+
+    <aside class="system-rail" aria-label="Interface status">
+      <span class="system-rail__line" aria-hidden="true"></span>
+      <span class="system-rail__label" id="activeModule">HOME</span>
+      <span class="system-rail__index" id="activeSectionIndex">00</span>
+    </aside>
+
+    <main id="main-content">
+      <section class="hero section-anchor" id="home" data-module="HOME" data-index="00">
+        <div class="hero__grid">
+          <div class="hero__copy reveal-item">
+            <div class="eyebrow eyebrow--live">
+              <span class="status-dot" aria-hidden="true"></span>
+              AI / ML engineering system
+            </div>
+            <p class="hero__coordinate">PROFILE_NODE / IN-01 / INTERFACE LOCAL</p>
+            <h1 class="hero__title">
+              <span>Aayushman</span>
+              <span>Baruah</span>
+            </h1>
+            <div class="hero__role-line">
+              <span class="hero__role" data-config="role">AI/ML Engineer</span>
+              <span class="hero__role-rule" aria-hidden="true"></span>
+            </div>
+            <p class="hero__statement" data-config="intro">
+              Building thoughtful AI systems with Python, machine learning, and generative AI.
+            </p>
+            <div class="hero__actions">
+              <a class="button button--primary" href="#projects">
+                <span>Enter project control</span><i aria-hidden="true">→</i>
+              </a>
+              <button class="button button--quiet" id="voiceButton" type="button">
+                <span class="button__voice-mark" aria-hidden="true"><i></i><i></i><i></i></span>
+                <span>Activate voice</span>
+              </button>
+            </div>
+            <dl class="hero__telemetry" aria-label="Interface telemetry">
+              <div>
+                <dt>Focus</dt>
+                <dd>AI systems</dd>
+              </div>
+              <div>
+                <dt>Interface</dt>
+                <dd>Interactive</dd>
+              </div>
+              <div>
+                <dt>Portfolio</dt>
+                <dd id="projectCount">03 modules</dd>
+              </div>
+            </dl>
+          </div>
+
+          <div class="core-stage reveal-item" id="coreStage">
+            <div class="core-stage__backplate" aria-hidden="true"></div>
+            <div class="core-label core-label--one" aria-hidden="true">
+              <span>Core status</span><b>ONLINE</b><i></i>
+            </div>
+            <div class="core-label core-label--two" aria-hidden="true">
+              <span>Neural link</span><b>READY</b><i></i>
+            </div>
+            <div class="core-label core-label--three" aria-hidden="true">
+              <span>Model pipeline</span><b>ACTIVE</b><i></i>
+            </div>
+            <div class="core-label core-label--four" aria-hidden="true">
+              <span>System load</span><b>STABLE</b><i></i>
+            </div>
+
+            <button
+              class="arc-core"
+              id="arcCore"
+              type="button"
+              aria-label="Activate the engineering core and voice interface"
+              aria-describedby="coreHint"
+            >
+              <span class="arc-core__halo" aria-hidden="true"></span>
+              <canvas class="arc-core__particles" id="coreParticles" aria-hidden="true"></canvas>
+              <span class="arc-core__assembly" aria-hidden="true">
+                <svg class="arc-core__svg" viewBox="0 0 500 500" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <defs>
+                    <radialGradient id="coreGlow" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(250 250) rotate(90) scale(142)">
+                      <stop stop-color="#D5FBFF" stop-opacity="0.96" />
+                      <stop offset="0.19" stop-color="#72E7FF" stop-opacity="0.88" />
+                      <stop offset="0.55" stop-color="#1498BE" stop-opacity="0.22" />
+                      <stop offset="1" stop-color="#0A3545" stop-opacity="0" />
+                    </radialGradient>
+                    <linearGradient id="ringStroke" x1="112" y1="90" x2="393" y2="402" gradientUnits="userSpaceOnUse">
+                      <stop stop-color="#D8FAFF" />
+                      <stop offset="0.36" stop-color="#42C7E8" />
+                      <stop offset="0.68" stop-color="#08728F" />
+                      <stop offset="1" stop-color="#BDF8FF" />
+                    </linearGradient>
+                    <filter id="softGlow" x="-50%" y="-50%" width="200%" height="200%">
+                      <feGaussianBlur stdDeviation="4" result="blur" />
+                      <feMerge><feMergeNode in="blur" /><feMergeNode in="SourceGraphic" /></feMerge>
+                    </filter>
+                  </defs>
+                  <circle cx="250" cy="250" r="215" class="svg-orbit svg-orbit--outer" />
+                  <circle cx="250" cy="250" r="189" class="svg-orbit svg-orbit--faint" />
+                  <g class="svg-ticks" id="coreTicks"></g>
+                  <g class="svg-ring svg-ring--slow">
+                    <path d="M250 72 A178 178 0 0 1 405 340" class="svg-segment" />
+                    <path d="M250 428 A178 178 0 0 1 95 160" class="svg-segment svg-segment--dim" />
+                    <circle cx="250" cy="250" r="160" class="svg-orbit svg-orbit--dashed" />
+                  </g>
+                  <g class="svg-ring svg-ring--reverse">
+                    <path d="M364 137 A161 161 0 0 1 394 272" class="svg-segment svg-segment--wide" />
+                    <path d="M136 363 A161 161 0 0 1 105 227" class="svg-segment svg-segment--wide" />
+                    <path d="M192 101 A161 161 0 0 1 249 89" class="svg-segment svg-segment--dim" />
+                    <path d="M307 399 A161 161 0 0 1 250 411" class="svg-segment svg-segment--dim" />
+                  </g>
+                  <g class="svg-ring svg-ring--fast">
+                    <circle cx="250" cy="250" r="130" class="svg-orbit svg-orbit--notched" />
+                    <path d="M250 119 L267 146 L250 159 L233 146 Z" class="svg-diamond" />
+                    <path d="M381 250 L354 267 L341 250 L354 233 Z" class="svg-diamond" />
+                    <path d="M250 381 L233 354 L250 341 L267 354 Z" class="svg-diamond" />
+                    <path d="M119 250 L146 233 L159 250 L146 267 Z" class="svg-diamond" />
+                  </g>
+                  <g class="svg-ring svg-ring--inner">
+                    <circle cx="250" cy="250" r="98" class="svg-orbit svg-orbit--inner" />
+                    <path d="M250 145 A105 105 0 0 1 346 208" class="svg-segment svg-segment--bright" />
+                    <path d="M250 355 A105 105 0 0 1 154 292" class="svg-segment svg-segment--bright" />
+                  </g>
+                  <circle cx="250" cy="250" r="75" class="svg-core-field" />
+                  <circle cx="250" cy="250" r="54" class="svg-core-edge" />
+                  <circle cx="250" cy="250" r="41" class="svg-core" filter="url(#softGlow)" />
+                  <circle cx="250" cy="250" r="21" class="svg-core-dot" />
+                  <line x1="250" y1="28" x2="250" y2="471" class="svg-scan svg-scan--vertical" />
+                  <line x1="28" y1="250" x2="471" y2="250" class="svg-scan svg-scan--horizontal" />
+                </svg>
+              </span>
+              <span class="arc-core__center-label" aria-hidden="true">
+                <small>ARC / 01</small><strong>100</strong><em>ENERGY FLOW</em>
+              </span>
+            </button>
+
+            <p class="core-hint" id="coreHint">Select core to establish interface link</p>
+            <div class="core-activation" id="coreActivation" aria-live="polite" aria-atomic="true">
+              <span>CORE ACTIVATION</span>
+              <span>ENERGY FLOW <b>100%</b></span>
+              <span>NEURAL LINK <b>ESTABLISHED</b></span>
+              <span>SYSTEM <b>ONLINE</b></span>
+            </div>
+          </div>
+        </div>
+
+        <div class="voice-console reveal-item" id="voiceConsole" aria-live="polite">
+          <div class="voice-console__label">
+            <span class="status-dot" aria-hidden="true"></span>
+            <span>Voice interface</span>
+          </div>
+          <div class="waveform" id="voiceWaveform" aria-label="Voice activity visualization" aria-hidden="true">
+            <i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i>
+          </div>
+          <p id="voiceStatus">Voice output ready when supported by your browser.</p>
+          <span class="voice-console__channel">CHANNEL / SYNTH-01</span>
+        </div>
+      </section>
+
+      <section class="content-section section-anchor" id="systems" data-module="SYSTEMS" data-index="01" aria-labelledby="systemsTitle">
+        <div class="section-heading reveal-item">
+          <div>
+            <p class="eyebrow"><span>01</span> Capability map</p>
+            <h2 id="systemsTitle">System<br /><em>architecture.</em></h2>
+          </div>
+          <p class="section-heading__copy">
+            Engineering modules built around practical model work, intelligent workflows, and usable software systems.
+          </p>
+        </div>
+
+        <div class="architecture-grid">
+          <article class="architecture-card reveal-item">
+            <div class="architecture-card__topline"><span>Module 01</span><span class="module-signal" aria-hidden="true"></span></div>
+            <div class="architecture-card__index">ML</div>
+            <h3>Machine<br />learning</h3>
+            <p>Machine learning systems, model development, feature engineering, and evaluation.</p>
+            <ul class="tech-list" aria-label="Machine learning technologies">
+              <li>Python</li><li>scikit-learn</li><li>XGBoost</li><li>Pandas</li><li>NumPy</li>
+            </ul>
+            <div class="architecture-card__footer"><span>MODEL DEVELOPMENT</span><i>↗</i></div>
+          </article>
+
+          <article class="architecture-card architecture-card--featured reveal-item">
+            <div class="architecture-card__topline"><span>Module 02</span><span class="module-signal" aria-hidden="true"></span></div>
+            <div class="architecture-card__index">GEN</div>
+            <h3>Generative<br />AI</h3>
+            <p>Generative AI workflows, intelligent agents, AI interfaces, and model-driven applications.</p>
+            <ul class="tech-list" aria-label="Generative AI technologies">
+              <li>Python</li><li>LLMs</li><li>APIs</li><li>Generative AI</li>
+            </ul>
+            <div class="architecture-card__footer"><span>WORKFLOW DESIGN</span><i>↗</i></div>
+          </article>
+
+          <article class="architecture-card reveal-item">
+            <div class="architecture-card__topline"><span>Module 03</span><span class="module-signal" aria-hidden="true"></span></div>
+            <div class="architecture-card__index">SYS</div>
+            <h3>AI system<br />engineering</h3>
+            <p>Turning models into usable applications, interfaces, and deployable systems.</p>
+            <ul class="tech-list" aria-label="AI system engineering technologies">
+              <li>Streamlit</li><li>Git</li><li>APIs</li><li>MERN</li>
+            </ul>
+            <div class="architecture-card__footer"><span>PRODUCT LAYER</span><i>↗</i></div>
+          </article>
+        </div>
+      </section>
+
+      <section class="content-section projects-section section-anchor" id="projects" data-module="PROJECTS" data-index="02" aria-labelledby="projectsTitle">
+        <div class="section-heading section-heading--project reveal-item">
+          <div>
+            <p class="eyebrow"><span>02</span> Indexed work</p>
+            <h2 id="projectsTitle">Project<br /><em>control.</em></h2>
+          </div>
+          <div class="section-heading__side-note">
+            <span class="status-dot" aria-hidden="true"></span>
+            <p>Each record opens a project brief. Status labels describe portfolio taxonomy, not live infrastructure.</p>
+          </div>
+        </div>
+        <div class="project-grid" id="projectGrid" aria-live="polite"></div>
+        <noscript>
+          <p class="noscript-note">Enable JavaScript to load the interactive project records.</p>
+        </noscript>
+      </section>
+
+      <section class="content-section stack-section section-anchor" id="stack" data-module="STACK" data-index="03" aria-labelledby="stackTitle">
+        <div class="section-heading reveal-item">
+          <div>
+            <p class="eyebrow"><span>03</span> Technology matrix</p>
+            <h2 id="stackTitle">Engineering<br /><em>stack.</em></h2>
+          </div>
+          <p class="section-heading__copy">
+            A working technology map—grouped by system concern rather than inflated proficiency scores.
+          </p>
+        </div>
+        <div class="stack-matrix" id="stackMatrix" aria-label="Engineering technology stack"></div>
+      </section>
+
+      <section class="lab-section section-anchor" id="lab" data-module="LAB" data-index="04" aria-labelledby="labTitle">
+        <div class="lab-section__heading reveal-item">
+          <p class="eyebrow"><span>04</span> Research protocol</p>
+          <h2 id="labTitle">Lab<br />signal path.</h2>
+          <p>
+            A system-first approach to turning a technical question into an inspectable, useful engineering artifact.
+          </p>
+        </div>
+        <div class="lab-path" aria-label="Engineering workflow">
+          <article class="lab-node reveal-item">
+            <span class="lab-node__number">01</span>
+            <div class="lab-node__icon" aria-hidden="true">⌁</div>
+            <h3>Frame the signal</h3>
+            <p>Define the problem, constraints, and the information a system actually needs to surface.</p>
+          </article>
+          <article class="lab-node reveal-item">
+            <span class="lab-node__number">02</span>
+            <div class="lab-node__icon" aria-hidden="true">◌</div>
+            <h3>Test assumptions</h3>
+            <p>Use experiments, data work, and model iteration to challenge the first answer—not decorate it.</p>
+          </article>
+          <article class="lab-node reveal-item">
+            <span class="lab-node__number">03</span>
+            <div class="lab-node__icon" aria-hidden="true">↗</div>
+            <h3>Package for use</h3>
+            <p>Translate viable work into an interface, workflow, or documented system that people can inspect.</p>
+          </article>
+        </div>
+        <div class="lab-disclaimer reveal-item">
+          <span>LAB NOTE / 01</span>
+          <p>Evidence over theater. This portfolio avoids simulated metrics and implied deployments.</p>
+        </div>
+      </section>
+
+      <section class="console-section" id="console" aria-labelledby="consoleTitle">
+        <div class="console-section__head reveal-item">
+          <div>
+            <p class="eyebrow"><span>05</span> Direct interface</p>
+            <h2 id="consoleTitle">AI command<br /><em>console.</em></h2>
+          </div>
+          <p>Type a command to query this portfolio. Try <kbd>help</kbd> to inspect available routes.</p>
+        </div>
+        <div class="terminal reveal-item" id="terminal">
+          <div class="terminal__topbar">
+            <div class="terminal__lights" aria-hidden="true"><i></i><i></i><i></i></div>
+            <div class="terminal__name">AB-TERMINAL / LOCAL INTERFACE</div>
+            <div class="terminal__state"><span class="status-dot" aria-hidden="true"></span> READY</div>
+          </div>
+          <div class="terminal__body">
+            <div class="terminal__output" id="terminalOutput" role="log" aria-live="polite" aria-label="Command output"></div>
+            <form class="terminal__form" id="terminalForm">
+              <label class="sr-only" for="commandInput">Type a portfolio command</label>
+              <span class="terminal__prompt" aria-hidden="true">operator@ab:~$</span>
+              <input
+                id="commandInput"
+                type="text"
+                inputmode="text"
+                autocomplete="off"
+                autocapitalize="none"
+                spellcheck="false"
+                placeholder="type a command…"
+                aria-describedby="commandHint"
+              />
+              <button type="submit" aria-label="Run command">Run</button>
+            </form>
+            <p class="terminal__hint" id="commandHint">Tab autocompletes the first matching command.</p>
+            <div class="command-suggestions" id="commandSuggestions" aria-label="Suggested commands"></div>
+          </div>
+        </div>
+      </section>
+
+      <section class="contact-section section-anchor" id="contact" data-module="CONTACT" data-index="05" aria-labelledby="contactTitle">
+        <div class="contact-section__radar" aria-hidden="true"><i></i><i></i><i></i></div>
+        <div class="contact-section__copy reveal-item">
+          <p class="eyebrow"><span>06</span> Connection channels</p>
+          <h2 id="contactTitle">Open a useful<br /><em>conversation.</em></h2>
+          <p>
+            For AI/ML engineering opportunities, technical discussions, and collaborative work—choose a channel below.
+          </p>
+        </div>
+        <div class="contact-channels reveal-item" id="contactChannels">
+          <a class="contact-channel" id="githubLink" href="https://github.com/ayushmanbarua" target="_blank" rel="noreferrer">
+            <span class="contact-channel__code">01 / GITHUB</span>
+            <strong>View source profile</strong>
+            <i aria-hidden="true">↗</i>
+          </a>
+          <a class="contact-channel" id="linkedinLink" href="https://www.linkedin.com/in/ayushman-barua/" target="_blank" rel="noreferrer">
+            <span class="contact-channel__code">02 / LINKEDIN</span>
+            <strong>Connect professionally</strong>
+            <i aria-hidden="true">↗</i>
+          </a>
+          <div class="contact-channel contact-channel--configure" id="emailChannel">
+            <span class="contact-channel__code">03 / EMAIL</span>
+            <strong id="emailLabel">Email channel configurable</strong>
+            <i aria-hidden="true">+</i>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div><span class="system-mark" aria-hidden="true"><i></i><i></i><i></i></span> AB / ENGINEERING INTERFACE</div>
+      <p>Designed as an interactive portfolio system. <span id="footerYear"></span></p>
+      <a href="#home">Return to core <span aria-hidden="true">↑</span></a>
+    </footer>
+
+    <dialog class="project-dialog" id="projectDialog" aria-labelledby="dialogProjectName">
+      <div class="project-dialog__panel">
+        <div class="project-dialog__topline">
+          <span id="dialogProjectId">P-00</span>
+          <span id="dialogProjectStatus" class="status-label">PROJECT BRIEF</span>
+          <button class="dialog-close" id="dialogClose" type="button" aria-label="Close project brief">×</button>
+        </div>
+        <div class="project-dialog__intro">
+          <p class="eyebrow">Project overview</p>
+          <h2 id="dialogProjectName">Project name</h2>
+          <p id="dialogProjectSummary"></p>
+        </div>
+        <div class="dialog-tech" id="dialogTechnology" aria-label="Project technologies"></div>
+        <div class="project-dialog__details">
+          <section><h3>Project overview</h3><p id="dialogOverview"></p></section>
+          <section><h3>Problem</h3><p id="dialogProblem"></p></section>
+          <section><h3>Approach</h3><p id="dialogApproach"></p></section>
+          <section><h3>Engineering decisions</h3><p id="dialogDecisions"></p></section>
+          <section><h3>Result</h3><p id="dialogResult"></p></section>
+        </div>
+        <div class="project-dialog__repository">
+          <span>GitHub</span>
+          <a class="button button--primary" id="dialogGithub" target="_blank" rel="noreferrer">
+            <span>View repository</span><i aria-hidden="true">↗</i>
+          </a>
+          <p id="dialogGithubNote"></p>
+        </div>
+      </div>
+    </dialog>
+
+    <div class="toast" id="interfaceToast" role="status" aria-live="polite"></div>
+
+    <noscript>
+      <style>
+        body { overflow: auto !important; }
+        .boot-screen { display: none !important; }
+      </style>
+    </noscript>
+    <script type="module" src="js/app.js"></script>
+  </body>
+</html>
