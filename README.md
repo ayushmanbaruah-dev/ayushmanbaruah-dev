@@ -1,130 +1,334 @@
 # AAYUSHMAN BARUAH
 
-> **AI / ML ENGINEER**
->
-> Python · Machine Learning · Generative AI · AI Systems · Computer Vision · Data / ML Engineering
+### AI/ML ENGINEER · PYTHON · GENERATIVE AI · COMPUTER VISION · AI SYSTEMS
 
-A personal portfolio built as an interactive engineering interface—not a conventional developer landing page. It uses a restrained industrial HUD language, an animated energy core, a browser-native voice introduction, and a working command console to make the work itself the center of the experience.
-
-[Explore the portfolio interface](#run-locally) · [GitHub](https://github.com/ayushmanbarua) · [LinkedIn](https://www.linkedin.com/in/ayushman-barua/)
+> **Building intelligent systems through engineering, experimentation, and hands-on implementation.**
 
 ---
 
-## // PROFILE
-
-I am focused on building thoughtful AI systems with Python, machine learning, and generative AI. The portfolio is designed to communicate a systems mindset: model work should be inspectable, usable, and connected to a clear engineering purpose.
-
-## // FEATURED PROJECT RECORDS
-
-| ID | Project | Focus |
-| --- | --- | --- |
-| `P-01` | **RansomwareWatch** | A security-focused AI/ML project exploring ransomware detection and monitoring. |
-| `P-02` | **AI / ML System Lab** | Explorations across machine learning, deep learning, generative AI, computer vision, and model experimentation. |
-| `P-03` | **Python Engineering Base** | Structured Python examples, fundamentals, practice problems, mini projects, and interview preparation. |
-
-Project descriptions are intentionally precise. This site does not imply production deployments, performance metrics, or outcomes that have not been published.
-
-## // ENGINEERING STACK
-
-| System group | Working set |
-| --- | --- |
-| **Languages** | Python, SQL, JavaScript |
-| **Data** | Pandas, NumPy, Matplotlib |
-| **Machine Learning** | scikit-learn, XGBoost |
-| **Deep Learning** | TensorFlow, Keras |
-| **Computer Vision** | OpenCV |
-| **Generative AI** | Generative AI, LLM workflows |
-| **Tools** | Git, GitHub, Streamlit |
-| **Web** | MERN |
-
-## // PORTFOLIO ARCHITECTURE
+## SYSTEM INITIALIZATION
 
 ```text
-.
-├── index.html                 # Semantic static page and UI structure
-├── css/
-│   └── styles.css             # Responsive HUD visual system and motion rules
-├── js/
-│   ├── config.js              # Single editable profile / links / projects config
-│   ├── app.js                 # Page orchestration, voice, boot, modal, navigation
-│   ├── core-visual.js         # Interactive SVG + canvas energy core controller
-│   └── console.js             # Command console and autocomplete behavior
-└── assets/
-    ├── icons/
-    │   └── ab-core.svg        # Original interface favicon
-    └── images/                # Reserved for future original project imagery
+[ SYSTEM ]
+Identity       : Aayushman Baruah
+Role           : AI/ML Engineer
+Focus          : Machine Learning • Generative AI • Computer Vision
+Engineering    : Python • SQL • Data • AI Systems
+Status         : ACTIVE
+Mode           : BUILD / LEARN / EXPERIMENT
 ```
 
-### Interface features
+I’m a Computer Science graduate specializing in Data Science, focused on building practical AI/ML systems rather than only studying theory.
 
-- Short, skippable system boot sequence
-- Interactive CSS/SVG/canvas energy core with pointer response and activation state
-- Browser-native voice introduction through the Web Speech API, with a graceful fallback
-- Project control records with hover diagnostics and accessible detail dialogs
-- Technology matrix without arbitrary percentage skill bars
-- Working command console: `help`, `about`, `projects`, `stack`, `systems`, `contact`, `voice`, `status`, and `clear`
-- Responsive HUD navigation, section state indicator, keyboard support, focus styles, and reduced-motion support
-- Zero build step and no backend dependency—ready for GitHub Pages
+My approach is simple:
 
-## // CUSTOMIZE CONTENT
+**Learn → Build → Break → Debug → Improve → Ship**
 
-All high-frequency edits are in **[`js/config.js`](js/config.js)**:
-
-```js
-export const PORTFOLIO_CONFIG = {
-  name: "Aayushman Baruah",
-  role: "AI/ML Engineer",
-  social: {
-    github: "https://github.com/ayushmanbarua",
-    linkedin: "https://www.linkedin.com/in/ayushman-barua/",
-    email: "", // add an email address to enable the email channel
-  },
-  projects: [/* project records */],
-  stack: [/* technology groups */],
-};
-```
-
-Before publishing, add an email address and repository URLs for any project that is public. The project modal intentionally displays a configuration note instead of inventing a repository link when a project URL is absent.
-
-## // RUN LOCALLY
-
-No package install is required. Serve the directory with any static web server:
-
-```bash
-# Clone your repository, then:
-cd ayushmanbaruah-dev
-python3 -m http.server 4173
-```
-
-Open [http://localhost:4173](http://localhost:4173) in a modern browser.
-
-> The voice action depends on the browser's Web Speech API and typically requires a user interaction. If it is unavailable or blocked, the interface displays a clear visual fallback.
-
-## // DEPLOY TO GITHUB PAGES
-
-1. Push the repository to GitHub.
-2. Open the repository on GitHub and select **Settings** → **Pages**.
-3. Under **Build and deployment**, select **Deploy from a branch**.
-4. Choose the branch containing this site (usually `main`) and select the `/ (root)` folder.
-5. Click **Save**.
-6. After GitHub finishes publishing, open the URL displayed in the Pages panel—usually:
-
-   ```text
-   https://<github-username>.github.io/<repository-name>/
-   ```
-
-There is no build command, environment variable, or backend service to configure.
-
-## // DESIGN PRINCIPLES
-
-- Original engineering-interface inspiration; no character imagery, movie screenshots, trademarks, or imitation voice
-- Dark industrial palette with controlled cyan and limited warm-alert accents
-- Motion is present to communicate system state, not as decoration
-- Clear content hierarchy and accessible controls take priority over visual effects
-- `prefers-reduced-motion` dramatically reduces animated behavior
+I’m particularly interested in the engineering side of AI — turning models, data, algorithms, and software into systems that actually work.
 
 ---
 
-**Connection channels**
+## CORE SYSTEMS
 
-[GitHub](https://github.com/ayushmanbarua) · [LinkedIn](https://www.linkedin.com/in/ayushman-barua/)
+### MACHINE LEARNING
+
+Building and experimenting with machine-learning pipelines involving:
+
+* Data preprocessing
+* Feature engineering
+* Classification & regression
+* Model evaluation
+* Ensemble learning
+* XGBoost
+* scikit-learn
+
+### GENERATIVE AI
+
+Exploring modern AI systems including:
+
+* Generative AI
+* LLM-based applications
+* AI agents
+* Prompt engineering
+* Model experimentation
+* AI-assisted workflows
+
+### COMPUTER VISION
+
+Working with:
+
+* OpenCV
+* Image processing
+* Computer vision pipelines
+* Visual data analysis
+* AI-powered detection systems
+
+### AI ENGINEERING
+
+Interested in the complete lifecycle:
+
+```text
+DATA
+  ↓
+PROCESSING
+  ↓
+FEATURES
+  ↓
+MODEL
+  ↓
+EVALUATION
+  ↓
+APPLICATION
+  ↓
+DEPLOYMENT
+  ↓
+MONITORING
+```
+
+The goal isn't just to train a model.
+
+**The goal is to build the system around it.**
+
+---
+
+# PROJECT CONTROL
+
+## 01 — RANSOMWAREWATCH
+
+**AI / CYBERSECURITY SYSTEM**
+
+A security-focused project exploring ransomware detection and monitoring concepts.
+
+### Focus
+
+* Python
+* Machine Learning
+* Cybersecurity
+* Data Analysis
+* Detection Systems
+
+### Engineering Objective
+
+Build intelligent mechanisms capable of analyzing system behaviour and identifying suspicious activity.
+
+**STATUS:** `REBUILDING / IMPROVING`
+
+---
+
+## 02 — AI / ML SYSTEM LAB
+
+**EXPERIMENTAL AI ENGINEERING**
+
+A collection of experiments and implementations focused on understanding how AI systems work beyond simply calling an API.
+
+### Areas
+
+* Machine Learning
+* Deep Learning
+* Generative AI
+* Computer Vision
+* Model experimentation
+* Data processing
+* AI applications
+
+**STATUS:** `ACTIVE`
+
+---
+
+## 03 — PYTHON ENGINEERING BASE
+
+**PYTHON FUNDAMENTALS → ENGINEERING**
+
+A continuously evolving Python repository documenting my journey from fundamentals to practical engineering.
+
+### Includes
+
+* Python fundamentals
+* Data types
+* Strings
+* Operators
+* Lists
+* Tuples
+* Sets
+* Dictionaries
+* Control flow
+* Problem solving
+* Mini projects
+* Interview preparation
+
+This repository is intentionally built step-by-step.
+
+The objective is not to memorize Python.
+
+**The objective is to become dangerous with it.**
+
+**STATUS:** `ACTIVE / CONTINUOUSLY UPDATED`
+
+---
+
+# ENGINEERING STACK
+
+### PROGRAMMING
+
+`Python` `SQL` `JavaScript`
+
+### DATA
+
+`Pandas` `NumPy` `Matplotlib`
+
+### MACHINE LEARNING
+
+`scikit-learn` `XGBoost`
+
+### DEEP LEARNING
+
+`TensorFlow` `Keras`
+
+### COMPUTER VISION
+
+`OpenCV`
+
+### GENERATIVE AI
+
+`Generative AI` `LLM Applications` `AI Agents`
+
+### DEVELOPMENT
+
+`Streamlit` `Git` `GitHub` `MERN`
+
+---
+
+# CURRENT LEARNING VECTOR
+
+```text
+PYTHON
+  ↓
+DSA
+  ↓
+MACHINE LEARNING
+  ↓
+DEEP LEARNING
+  ↓
+GENERATIVE AI
+  ↓
+AI SYSTEM ENGINEERING
+  ↓
+PRODUCTION AI
+```
+
+I'm continuously strengthening the fundamentals while building increasingly complex projects.
+
+---
+
+# ENGINEERING PHILOSOPHY
+
+### 01 — BUILD, DON'T JUST WATCH
+
+Tutorials are useful.
+
+Projects are where understanding gets tested.
+
+### 02 — UNDERSTAND THE SYSTEM
+
+I want to understand:
+
+```text
+WHY does it work?
+HOW does it work?
+WHEN does it fail?
+HOW can it be improved?
+```
+
+### 03 — BREAK THINGS
+
+Bugs are part of the engineering process.
+
+```text
+ERROR
+  ↓
+DEBUG
+  ↓
+UNDERSTAND
+  ↓
+FIX
+  ↓
+IMPROVE
+```
+
+### 04 — KEEP SHIPPING
+
+Every project is another opportunity to turn knowledge into something real.
+
+---
+
+# WHAT I'M BUILDING TOWARD
+
+My long-term direction is **AI/ML Engineering**.
+
+I'm interested in systems that combine:
+
+```text
+Software Engineering
+        +
+Data
+        +
+Machine Learning
+        +
+Generative AI
+        +
+Automation
+```
+
+The goal is to become an engineer who can move from:
+
+**idea → data → model → system → application**
+
+---
+
+# OPEN TO
+
+```text
+AI/ML ENGINEER
+PYTHON DEVELOPER
+MACHINE LEARNING
+GENERATIVE AI
+COMPUTER VISION
+DATA / ML ENGINEERING
+AI SYSTEMS
+```
+
+I'm especially interested in opportunities where I can learn quickly, contribute through hands-on engineering, and work on real AI problems.
+
+---
+
+# CONNECT
+
+### GitHub
+
+[github.com/ayushmanbarua](https://github.com/ayushmanbaruah-dev)
+
+### LinkedIn
+
+[linkedin.com/in/ayushman-baruah/](https://www.linkedin.com/in/aayushmaanbaruah/)
+
+---
+
+```text
+┌──────────────────────────────────────────────┐
+│              SYSTEM STATUS                   │
+├──────────────────────────────────────────────┤
+│ AI/ML              : ONLINE                  │
+│ PYTHON             : ACTIVE                  │
+│ MACHINE LEARNING   : BUILDING                │
+│ GENERATIVE AI      : EXPERIMENTING           │
+│ COMPUTER VISION    : ACTIVE                  │
+│ PROJECTS           : IN DEVELOPMENT          │
+│ LEARNING           : CONTINUOUS              │
+└──────────────────────────────────────────────┘
+```
+
+### `SYSTEM ONLINE`
+
+**The portfolio is the interface.
+The repositories are the proof.
+The projects are the evidence.**
